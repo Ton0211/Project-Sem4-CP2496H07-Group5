@@ -6,7 +6,7 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:define name="content">
         <main class="flex-grow flex items-center justify-center p-4 lg:p-8">
-            <div class="w-full max-w-5xl bg-white dark:bg-[#112116] rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-[#e8ecea] dark:border-[#2a4034]">
+            <div class="w-full max-w-5xl bg-white dark:bg-transparent rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-[#e8ecea] dark:border-[#2a4034]">
                 <!-- Left Side: Hero Image -->
                 <div class="relative w-full md:w-1/2 min-h-[300px] md:min-h-[600px] bg-gray-100">
                     <img alt="Fresh vegetables and fruits in a paper bag on a table" class="absolute inset-0 w-full h-full object-cover" data-alt="Fresh vegetables and fruits in a paper bag on a table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlgwkZH3fsQiTfG2JkKO7pehFxPWVkaiZeXuTuJt_fG3a_mV9QXfkBJC4IlVErHZQ4j7Qb4Fk53gX8LCTxsG8gqaj543ctB-CtMVcvqAjm2qc7yrLrkw9FGc9MsLzTrUturmGZbBSSpWPvB1GbGmxfqPUvNOnaG-r5qkf2Gyrl-tG6GAMop9tDnB4wmyFi4e_kMxjP_Welp4homC3ZntlZlsvSq73OiYjl9SrvW8YkDhsadUhmVhutEMCzvUgPV0MUToydtgGIKKI"/>
@@ -21,7 +21,7 @@
                         <!-- Header -->
                         <div class="mb-8 text-center md:text-left">
                             <h1 class="text-[#111813] dark:text-white tracking-tight text-[32px] font-bold leading-tight pb-3">#{locale.getMessage('login.title')}</h1>
-                            <p class="text-[#63886f] text-base font-normal leading-normal">#{locale.getMessage('login.subtitle')}</p>
+                            <p class="text-[#4b5563] dark:text-[#d1d5db] text-base font-normal leading-normal">#{locale.getMessage('login.subtitle')}</p>
                         </div>
                         <!-- Error/Success Messages -->
                         <h:panelGroup layout="block" styleClass="space-y-2 mb-6">
@@ -38,10 +38,10 @@
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-[#111813] dark:text-white text-base font-medium leading-normal">#{locale.getMessage('login.emailLabel')}</label>
                                 <div class="flex w-full items-stretch rounded-lg group focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-1 dark:focus-within:ring-offset-[#112116]">
-                                    <h:inputText value="#{auth.identifier}" styleClass="form-input flex-1 resize-none overflow-hidden rounded-l-lg text-[#111813] border border-[#dce5df] bg-white focus:outline-none focus:border-primary focus:ring-0 h-14 placeholder:text-[#63886f] p-[15px] border-r-0 text-base" title="#{locale.getMessage('login.emailPlaceholder')}">
+                                    <h:inputText value="#{auth.identifier}" styleClass="form-input flex-1 resize-none overflow-hidden rounded-l-lg text-[#111813] border border-[#dce5df] bg-white focus:outline-none focus:border-primary focus:ring-0 h-14 placeholder:text-[#4b5563] dark:placeholder:text-[#d1d5db] p-[15px] border-r-0 text-base" title="#{locale.getMessage('login.emailPlaceholder')}">
                                         <f:passThroughAttribute name="placeholder" value="#{locale.getMessage('login.emailPlaceholder')}" />
                                     </h:inputText>
-                                    <div class="text-[#63886f] flex border border-[#dce5df] border-l-0 bg-white items-center justify-center pr-[15px] rounded-r-lg w-12">
+                                    <div class="text-[#4b5563] dark:text-[#d1d5db] flex border border-[#dce5df] border-l-0 bg-white items-center justify-center pr-[15px] rounded-r-lg w-12">
                                         <span class="material-symbols-outlined">person</span>
                                     </div>
                                 </div>
@@ -50,10 +50,10 @@
                             <div class="flex flex-col gap-1.5">
                                 <label class="text-[#111813] dark:text-white text-base font-medium leading-normal">#{locale.getMessage('login.passwordLabel')}</label>
                                 <div class="flex w-full items-stretch rounded-lg group focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-1 dark:focus-within:ring-offset-[#112116]">
-                                    <h:inputSecret id="login-pwd" value="#{auth.password}" styleClass="form-input flex-1 resize-none overflow-hidden rounded-l-lg text-[#111813] border border-[#dce5df] bg-white focus:outline-none focus:border-primary focus:ring-0 h-14 placeholder:text-[#63886f] p-[15px] border-r-0 text-base">
+                                    <h:inputSecret id="login-pwd" value="#{auth.password}" styleClass="form-input flex-1 resize-none overflow-hidden rounded-l-lg text-[#111813] border border-[#dce5df] bg-white focus:outline-none focus:border-primary focus:ring-0 h-14 placeholder:text-[#4b5563] dark:placeholder:text-[#d1d5db] p-[15px] border-r-0 text-base">
                                         <f:passThroughAttribute name="placeholder" value="#{locale.getMessage('login.passwordPlaceholder')}" />
                                     </h:inputSecret>
-                                    <div id="pwd-toggle-login" class="text-[#63886f] flex border border-[#dce5df] border-l-0 bg-white items-center justify-center pr-[15px] rounded-r-lg w-12 cursor-pointer hover:text-primary transition-colors">
+                                    <div id="pwd-toggle-login" class="text-[#4b5563] dark:text-[#d1d5db] flex border border-[#dce5df] border-l-0 bg-white items-center justify-center pr-[15px] rounded-r-lg w-12 cursor-pointer hover:text-primary transition-colors">
                                         <span class="material-symbols-outlined pwd-icon">visibility_off</span>
                                     </div>
                                 </div>
@@ -75,16 +75,16 @@
                                 <div class="w-full border-t border-[#f0f4f2] dark:border-[#2a4034]"></div>
                             </div>
                             <div class="relative flex justify-center">
-                                <span class="bg-white dark:bg-[#112116] px-2 text-sm text-[#63886f]">#{locale.getMessage('login.continueWith')}</span>
+                                <span class="bg-white dark:bg-[#112116] px-2 text-sm text-[#4b5563] dark:text-[#d1d5db]">#{locale.getMessage('login.continueWith')}</span>
                             </div>
                         </div>
                         <!-- Social Login -->
                         <div class="grid grid-cols-2 gap-4">
                             <h:form styleClass="contents">
-                                <h:commandButton id="google-login-btn" 
-                                               action="#{auth.redirectToGoogleOAuth()}" 
-                                               styleClass="flex items-center justify-center gap-2 h-12 rounded-lg border border-[#dce5df] hover:bg-gray-50 dark:hover:bg-[#1a3322] transition-colors bg-white dark:bg-[#112116] dark:border-[#2a4034]" 
-                                               value="Google" />
+                                <h:commandLink action="#{auth.redirectToGoogleOAuth()}" styleClass="flex items-center justify-center gap-3 h-12 rounded-lg border border-[#dce5df] hover:bg-gray-50 dark:hover:bg-[#1a3322] transition-colors bg-white dark:bg-[#112116] dark:border-[#2a4034] px-4">
+                                    <img alt="Google" class="w-5 h-5" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                                    <span class="text-sm font-bold text-[#111813] dark:text-white">Google</span>
+                                </h:commandLink>
                             </h:form>
                             <button class="flex items-center justify-center gap-2 h-12 rounded-lg border border-[#dce5df] hover:bg-gray-50 dark:hover:bg-[#1a3322] transition-colors bg-white dark:bg-[#112116] dark:border-[#2a4034]">
                                 <img alt="Apple" class="w-5 h-5" data-alt="Apple logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt95QDFH8irOiy94USrDJJ0MF7mcxRCNvg_BOcxLM1BLNToTNeodr_IiejZZmGe9c9YqbHEI5hTBDlFMbRusvs2VuIOOG9KpDHhBxbpqpPI2EUqRa9pbuZOSbHewCbKdq3kFebO116Cn5YDvqPj8OoD-rJ1G-928_6YPmlTCcVO7gZI_QkpyTII-FAKtn4aoqLXIQfxyAIiKOOed2vf-wH42csihjb9oA4QaPqtQ_qQ0ICdbCLGkjMRk74Ksy6NpLYko2aDm8iY9M"/>

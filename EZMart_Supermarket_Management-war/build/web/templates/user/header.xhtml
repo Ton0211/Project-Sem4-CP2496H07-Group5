@@ -132,6 +132,14 @@
                             </div>
                         </div>
 
+                        <!-- Theme Toggle Button -->
+                        <button id="theme-toggle-btn" class="flex items-center justify-center rounded-lg h-10 w-12 border border-[#f0f4f2] dark:border-gray-700 hover:bg-background-light dark:hover:bg-gray-800 transition-colors group"
+                                title="Toggle theme">
+                            <span id="theme-icon" class="material-symbols-outlined text-[#111813] dark:text-white group-hover:text-primary transition-colors">
+                                light_mode
+                            </span>
+                        </button>
+
                         <!-- Cart Button -->
                         <h:link outcome="cart"
                                 styleClass="relative flex items-center justify-center rounded-lg h-10 w-12 bg-primary/10 hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors group">
@@ -164,6 +172,7 @@
     </header>
     <script>//<![CDATA[
         document.addEventListener('DOMContentLoaded', function() {
+            // User Dropdown Menu Handler
             var dropdown = document.getElementById('user-dropdown-menu');
             if(dropdown) {
                 var dropdownContent = dropdown.querySelector('.dropdown-menu-content');
@@ -178,6 +187,76 @@
                     closeTimeout = setTimeout(function() {
                         dropdownContent.classList.add('hidden');
                     }, 300);
+                });
+            }
+
+            // Theme Toggle Handler
+            var themeToggleBtn = document.getElementById('theme-toggle-btn');
+            var themeIcon = document.getElementById('theme-icon');
+            var htmlElement = document.documentElement;
+
+            // Initialize theme from localStorage or system preference
+            function initializeTheme() {
+                var savedTheme = localStorage.getItem('theme');
+                var theme = savedTheme;
+
+                if (!theme) {
+                    // Check system preference
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        theme = 'dark';
+                    } else {
+                        theme = 'light';
+                    }
+                }
+
+                applyTheme(theme);
+            }
+
+            // Apply theme and update icon
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    htmlElement.classList.add('dark');
+                    themeIcon.textContent = 'dark_mode';
+                } else if (theme === 'light') {
+                    htmlElement.classList.remove('dark');
+                    themeIcon.textContent = 'light_mode';
+                } else if (theme === 'system') {
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        htmlElement.classList.add('dark');
+                    } else {
+                        htmlElement.classList.remove('dark');
+                    }
+                    themeIcon.textContent = 'computer';
+                }
+                localStorage.setItem('theme', theme);
+            }
+
+            // Theme cycle: light -> dark -> system -> light
+            themeToggleBtn.addEventListener('click', function() {
+                var currentTheme = localStorage.getItem('theme') || 'light';
+                var nextTheme;
+
+                if (currentTheme === 'light') {
+                    nextTheme = 'dark';
+                } else if (currentTheme === 'dark') {
+                    nextTheme = 'system';
+                } else {
+                    nextTheme = 'light';
+                }
+
+                applyTheme(nextTheme);
+            });
+
+            // Initialize on page load
+            initializeTheme();
+
+            // Listen to system theme changes
+            if (window.matchMedia) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                    var currentTheme = localStorage.getItem('theme');
+                    if (currentTheme === 'system' || !currentTheme) {
+                        applyTheme(currentTheme === 'system' ? 'system' : (e.matches ? 'dark' : 'light'));
+                    }
                 });
             }
         });

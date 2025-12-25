@@ -6,13 +6,13 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:define name="content">
         <main class="flex-grow flex items-center justify-center p-4 lg:p-8">
-            <div class="w-full max-w-md bg-white dark:bg-[#112116] rounded-2xl shadow-xl overflow-hidden p-8 sm:p-12">
+            <div class="w-full max-w-md bg-white dark:bg-transparent rounded-2xl shadow-xl overflow-hidden p-8 sm:p-12">
                 <!-- Header -->
                 <div class="text-center mb-8">
                     <h1 class="text-3xl font-bold tracking-tight text-[#111813] dark:text-white sm:text-4xl mb-2">
                         Verify Email
                     </h1>
-                    <p class="text-[#63886f] dark:text-gray-400">
+                    <p class="text-[#4b5563] dark:text-[#d1d5db]">
                         We sent a 4-digit verification code to<br/>
                         <strong>#{auth.passwordResetEmail != null ? auth.passwordResetEmail : auth.googleEmail}</strong>
                     </p>
@@ -44,7 +44,7 @@
                             <h:inputHidden id="otpCombined" value="#{auth.otpInputValue}" />
                             <!-- Also include a plain hidden input with name 'otp' so a standard form submit includes the parameter -->
                             <input type="hidden" id="otpHidden" name="otp" />
-                        <p class="text-xs text-[#63886f] dark:text-gray-500 mt-2 text-center">
+                        <p class="text-xs text-[#4b5563] dark:text-[#d1d5db] mt-2 text-center">
                             This code will expire in 10 minutes
                         </p>
                     </div>
@@ -57,7 +57,7 @@
                     </div>
 
                     <!-- Resend Option -->
-                    <div class="text-center text-sm text-[#63886f] dark:text-gray-400">
+                    <div class="text-center text-sm text-[#4b5563] dark:text-[#d1d5db]">
                         <p>Didn't receive the code?</p>
                         <h:commandLink action="#{auth.resendOtp}" 
                                       styleClass="text-primary hover:text-primary-dark font-semibold transition-colors" 

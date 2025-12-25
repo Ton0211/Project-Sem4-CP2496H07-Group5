@@ -59,7 +59,7 @@
                             <h2 class="text-3xl font-bold tracking-tight text-[#111813] dark:text-white sm:text-4xl">
                                 #{locale.getMessage('register.createAccount')}
                             </h2>
-                            <p class="mt-2 text-base text-[#63886f] dark:text-gray-400">
+                            <p class="mt-2 text-base text-[#4b5563] dark:text-[#d1d5db]">
                                 #{locale.getMessage('register.haveAccount')} 
                                 <h:link class="font-semibold text-primary hover:text-primary-dark transition-colors" value="#{locale.getMessage('register.logIn')}" outcome="login"/>
                             </p>
@@ -87,18 +87,18 @@
                                 <div>
                                     <label class="block text-sm font-medium leading-6 text-[#111813] dark:text-gray-200 mb-1.5" for="username">#{locale.getMessage('register.username')}</label>
                                     <div class="relative">
-                                        <h:inputText id="username" value="#{auth.regUsername}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#63886f]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white dark:placeholder-gray-500 transition-shadow" />
+                                        <h:inputText id="username" value="#{auth.regUsername}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#4b5563]/70 dark:placeholder:text-[#d1d5db]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white transition-shadow" />
                                     </div>
                                 </div>
                                 <div class="relative flex justify-center">
-                                    <span class="bg-white dark:bg-background-dark px-2 text-sm text-[#63886f]">#{locale.getMessage('register.orContinueWith')}</span>
+                                    <span class="bg-white dark:bg-background-dark px-2 text-sm text-[#4b5563] dark:text-[#d1d5db]">#{locale.getMessage('register.orContinueWith')}</span>
                                 </div>
                             </div>
                             <!-- First Name -->
                             <div>
                                 <label class="block text-sm font-medium leading-6 text-[#111813] dark:text-gray-200 mb-1.5" for="first-name">#{locale.getMessage('register.firstName')}</label>
                                 <div class="relative">
-                                    <h:inputText id="first-name" value="#{auth.firstName}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#63886f]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white dark:placeholder-gray-500 transition-shadow" />
+                                    <h:inputText id="first-name" value="#{auth.firstName}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#4b5563]/70 dark:placeholder:text-[#d1d5db]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white transition-shadow" />
                                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
                                         <span class="material-symbols-outlined text-[20px]">person</span>
                                     </div>
@@ -108,21 +108,21 @@
                             <div>
                                 <label class="block text-sm font-medium leading-6 text-[#111813] dark:text-gray-200 mb-1.5" for="middle-name">#{locale.getMessage('register.middleName')}</label>
                                 <div class="relative">
-                                    <h:inputText id="middle-name" value="#{auth.middleName}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#63886f]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white dark:placeholder-gray-500 transition-shadow" />
+                                    <h:inputText id="middle-name" value="#{auth.middleName}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#4b5563]/70 dark:placeholder:text-[#d1d5db]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white transition-shadow" />
                                 </div>
                             </div>
                             <!-- Last Name -->
                             <div>
                                 <label class="block text-sm font-medium leading-6 text-[#111813] dark:text-gray-200 mb-1.5" for="last-name">#{locale.getMessage('register.lastName')}</label>
                                 <div class="relative">
-                                    <h:inputText id="last-name" value="#{auth.lastName}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#63886f]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white dark:placeholder-gray-500 transition-shadow" />
+                                    <h:inputText id="last-name" value="#{auth.lastName}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#4b5563]/70 dark:placeholder:text-[#d1d5db]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white transition-shadow" />
                                 </div>
                             </div>
                             <!-- Email -->
                             <div>
                                 <label class="block text-sm font-medium leading-6 text-[#111813] dark:text-gray-200 mb-1.5" for="email">#{locale.getMessage('register.email')}</label>
                                 <div class="relative">
-                                    <h:inputText id="email" value="#{auth.regEmail}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#63886f]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white dark:placeholder-gray-500 transition-shadow" />
+                                    <h:inputText id="email" value="#{auth.regEmail}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#4b5563]/70 dark:placeholder:text-[#d1d5db]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white transition-shadow" />
                                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
                                         <span class="material-symbols-outlined text-[20px]">mail</span>
                                     </div>
@@ -133,7 +133,7 @@
                                 <div>
                                     <label class="block text-sm font-medium leading-6 text-[#111813] dark:text-gray-200 mb-1.5" for="pwd-field">#{locale.getMessage('register.password')}</label>
                                     <div class="relative">
-                                        <h:inputSecret id="pwd-field" value="#{auth.regPassword}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#63886f]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white dark:placeholder-gray-500 transition-shadow" />
+                                        <h:inputSecret id="pwd-field" value="#{auth.regPassword}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#4b5563]/70 dark:placeholder:text-[#d1d5db]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white transition-shadow" />
                                         <button id="pwd-toggle-1" class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto text-gray-400 hover:text-primary transition-colors" type="button">
                                             <span class="material-symbols-outlined pwd-icon">visibility_off</span>
                                         </button>
@@ -142,7 +142,7 @@
                                 <div>
                                     <label class="block text-sm font-medium leading-6 text-[#111813] dark:text-gray-200 mb-1.5" for="confirm-password">#{locale.getMessage('register.confirmPassword')}</label>
                                     <div class="relative">
-                                        <h:inputSecret id="confirm-password" value="#{auth.regConfirmPassword}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#63886f]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white dark:placeholder-gray-500 transition-shadow" />
+                                        <h:inputSecret id="confirm-password" value="#{auth.regConfirmPassword}" styleClass="form-input block w-full rounded-lg border-0 py-3.5 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-[#dce5df] placeholder:text-[#4b5563]/70 dark:placeholder:text-[#d1d5db]/70 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-gray-800 dark:ring-gray-700 dark:text-white transition-shadow" />
                                         <button id="pwd-toggle-2" class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto text-gray-400 hover:text-primary transition-colors" type="button">
                                             <span class="material-symbols-outlined pwd-icon">visibility_off</span>
                                         </button>
@@ -155,19 +155,19 @@
                                     <div id="bar2" class="h-1 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
                                     <div id="bar3" class="h-1 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
                                     <div id="bar4" class="h-1 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                                    <span id="pwd-strength-label" class="text-xs text-[#63886f] ml-2">&#160;</span>
+                                    <span id="pwd-strength-label" class="text-xs text-[#4b5563] dark:text-[#d1d5db] ml-2">&#160;</span>
                                 </div>
                             <!-- Checkboxes -->
                             <div class="space-y-4 pt-2">
-                                <div class="relative flex items-start">
+<!--                                <div class="relative flex items-start">
                                     <div class="flex h-6 items-center">
                                         <input aria-describedby="marketing-description" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="marketing" name="marketing" type="checkbox"/>
                                     </div>
                                     <div class="ml-3 text-sm leading-6">
                                         <label class="font-medium text-[#111813] dark:text-gray-200" for="marketing">#{locale.getMessage('register.keepUpdated')}</label>
-                                        <p class="text-[#63886f] dark:text-gray-400" id="marketing-description">#{locale.getMessage('register.emailAbout')}</p>
+                                        <p class="text-[#4b5563] dark:text-[#d1d5db]" id="marketing-description">#{locale.getMessage('register.emailAbout')}</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="relative flex items-start">
                                     <div class="flex h-6 items-center">
                                         <input checked="" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="terms" name="terms" type="checkbox"/>
@@ -259,7 +259,7 @@
                             });
                         //]]></script>
                         <!-- Trust Signals -->
-                        <div class="pt-4 flex items-center justify-center gap-2 text-xs text-[#63886f] dark:text-gray-500">
+                        <div class="pt-4 flex items-center justify-center gap-2 text-xs text-[#4b5563] dark:text-[#d1d5db]">
                             <span class="material-symbols-outlined text-[16px]">lock</span>
                             <span>#{locale.getMessage('register.dataSecure')}</span>
                         </div>

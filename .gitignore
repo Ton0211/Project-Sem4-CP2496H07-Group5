@@ -17,3 +17,7 @@
 # OS
 .DS_Store
 Thumbs.db
+/EZMart_Supermarket_Management-war/dist/
+/EZMart_Supermarket_Management-ejb/build/
+/EZMart_Supermarket_Management-ejb/dist/
+/EZMart_Supermarket_Management-war/build/
